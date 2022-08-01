@@ -21,6 +21,11 @@ buttons.forEach(button => button.addEventListener('click', () => {
     }, 100);
 }));
 
+display.addEventListener('click', () => {
+    currentNum = currentNum.substring(0, currentNum.length - 1)
+     return display.textContent = currentNum;
+})
+
 buttons.forEach(button => button.addEventListener('click', (e) => {
     
     if (isNaN(parseFloat(e.target.id))) {
