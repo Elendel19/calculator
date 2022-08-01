@@ -42,7 +42,7 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
         };
         if (currentNum == 0) {
             currentNum = total
-        };
+         };
 
         operate(op, total, currentNum);
         currentNum = 0
@@ -78,8 +78,14 @@ function multiply(currentNum, nextNum) {
 };
 
 function divide(currentNum, nextNum) {
-    total =  parseFloat(currentNum) / parseFloat(nextNum);
-    display.textContent = total;
+    if (nextNum == 0  || currentNum == 0) {
+        return total =  'No Way';
+    } else {
+        total =  parseFloat(currentNum) / parseFloat(nextNum);
+        display.textContent = total;
+    }
+    
+    
 };
 
 function percent(num) {
